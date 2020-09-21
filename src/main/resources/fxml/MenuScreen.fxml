@@ -5,14 +5,14 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MenuScreenController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MenuScreenController">
    <children>
        <MenuBar id="menu" layoutX="-8.0" layoutY="32.0" prefHeight="25.0" prefWidth="400.0">
            <menus>
                <Menu mnemonicParsing="false" text="%title.New">
                    <items>
                        <MenuItem mnemonicParsing="false" onAction="#addNewUser" text="%title.newUser" />
-                       <MenuItem mnemonicParsing="false" text="%title.newDevice" />
+                       <MenuItem mnemonicParsing="false"   text="%title.newDevice" />
                    </items>
                </Menu>
                <Menu mnemonicParsing="false" text="%title.Show">

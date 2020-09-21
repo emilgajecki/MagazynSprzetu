@@ -17,6 +17,12 @@ public class MenuScreenController {
 
     @FXML
     public void addNewUser (){
+
+    }
+
+    @FXML
+    public void addNewDevice (){
+
     }
 
 
