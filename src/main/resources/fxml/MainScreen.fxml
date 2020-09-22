@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MainControllers">
+
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:id="borderPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1">
 <top>
     <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-       <fx:include fx:id="topMenuScreen" source="MenuScreen.fxml" />
+        <fx:include source="MenuScreen.fxml" fx:id="topMenuButtons"/>
     </VBox>
 </top>
 </BorderPane>

@@ -1,11 +1,6 @@
 package pl.moj.obieg.controllers;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.Pane;
-
-import java.io.IOException;
 
 public class MenuScreenController {
 
@@ -16,14 +11,44 @@ public class MenuScreenController {
     }
 
     @FXML
-    public void addNewUser (){
-
+    public void newUser(){
+        System.out.println("newUser");
     }
 
     @FXML
-    public void addNewDevice (){
-
+    public void newDevice(){
+        System.out.println("newDevice");
     }
 
+    public void seeUser( ) {
+        System.out.println("seeUser");
+    }
 
+    public void seeDevice( ) {
+        System.out.println("seeDevice");
+    }
+
+    public void checkUser( ) {
+        System.out.println("checkUser");
+    }
+
+    public void checkDevice( ) {
+        System.out.println("checkDevice");
+    }
+
+    public void hardwareRelease( ) {
+        System.out.println("hardwareRelease");
+    }
+
+    public void blockUser( ) {
+        System.out.println("blockUser");
+    }
+
+    public void blockDevice( ) {
+        System.out.println("blockDevice");
+    }
+
+    public void closeApp( ) {
+        System.out.println("closeApp");
+    }
 }
