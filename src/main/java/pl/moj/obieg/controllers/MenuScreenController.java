@@ -1,5 +1,6 @@
 package pl.moj.obieg.controllers;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 
 public class MenuScreenController {
@@ -49,6 +50,6 @@ public class MenuScreenController {
     }
 
     public void closeApp( ) {
-        System.out.println("closeApp");
+        Platform.exit();
     }
 }
