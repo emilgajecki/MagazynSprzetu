@@ -1,49 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MenuScreenController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MenuScreenController">
    <children>
-      <MenuBar id="menu">
-         <menus>
-            <Menu mnemonicParsing="false" text="%title.New">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#newUser" text="%title.newUser" />
-                  <MenuItem mnemonicParsing="false" onAction="#newDevice" text="%title.newDevice" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="%title.Show">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#seeUser" text="%title.seeUser" />
-                  <MenuItem mnemonicParsing="false" onAction="#seeDevice" text="%title.seeDevice" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="%title.check">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#checkUser" text="%title.checkUser" />
-                  <MenuItem mnemonicParsing="false" onAction="#checkDevice" text="%title.seeDevice" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="%title.hardware">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#hardwareRelease" text="%title.hardwareC" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="%title.block">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#blockUser" text="%title.blockUser" />
-                  <MenuItem mnemonicParsing="false" onAction="#blockDevice" text="%title.blockDevice" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="%title.close">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#closeApp" text="%title.close" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
+      <ToggleButton mnemonicParsing="false" onAction="#newUser" text="%title.newUser">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleButtons" />
+         </toggleGroup></ToggleButton>
+      <ToggleButton mnemonicParsing="false" onAction="#newDevice" text="%title.newDevice" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#seeUser" text="%title.seeUser" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#seeDevice" text="%title.seeDevice" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#checkUser" text="%title.checkUser" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#checkDevice" text="%title.seeDevice" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#hardwareRelease" text="%title.hardwareC" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#blockUser" text="%title.blockUser" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#blockDevice" text="%title.blockDevice" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#closeApp" text="%title.close" toggleGroup="$toggleButtons" />
    </children>
-</VBox>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</HBox>

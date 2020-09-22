@@ -2,6 +2,7 @@ package pl.moj.obieg.controllers;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.ToggleGroup;
 
 public class MenuScreenController {
 
@@ -12,8 +13,14 @@ public class MenuScreenController {
     }
 
     @FXML
+    private ToggleGroup toggleButtons;
+
+    @FXML
     public void newUser(){
-        System.out.println("newUser");
+        if (toggleButtons.getSelectedToggle() !=null) {
+            toggleButtons.getSelectedToggle().setSelected(false);
+        }
+        mainControllers.setCenter("/fxml/NewUser.fxml");
     }
 
     @FXML

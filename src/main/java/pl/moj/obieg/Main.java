@@ -19,7 +19,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Locale.setDefault(new Locale("pl"));
         // ladujemy okno za pomoca FXML loadera
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/MainScreen.fxml"));
         // w celu ustandaryzowania programu(rozne jezyki uzywamy Resource
