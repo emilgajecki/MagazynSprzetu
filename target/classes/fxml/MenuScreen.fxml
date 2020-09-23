@@ -5,21 +5,49 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MenuScreenController">
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MenuScreenController">
    <children>
-      <ToggleButton mnemonicParsing="false" onAction="#newUser" text="%title.newUser">
-         <toggleGroup>
-            <ToggleGroup fx:id="toggleButtons" />
-         </toggleGroup></ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#newDevice" text="%title.newDevice" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#seeUser" text="%title.seeUser" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#seeDevice" text="%title.seeDevice" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#checkUser" text="%title.checkUser" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#checkDevice" text="%title.seeDevice" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#hardwareRelease" text="%title.hardwareC" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#blockUser" text="%title.blockUser" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#blockDevice" text="%title.blockDevice" toggleGroup="$toggleButtons" />
-      <ToggleButton mnemonicParsing="false" onAction="#closeApp" text="%title.close" toggleGroup="$toggleButtons" />
+      <MenuBar id="menu" layoutX="-8.0" layoutY="32.0" prefHeight="25.0" prefWidth="400.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Nowy">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newUser" text="Użytkownik" />
+                  <MenuItem mnemonicParsing="false" onAction="#newDevice" text="Sprzęt" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pokaż">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#seeUser" text="Użytkowników" />
+                  <MenuItem mnemonicParsing="false" onAction="#seeDevice" text="Sprzęt" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sprawdź">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#checkUser" text="Użytkownika" />
+                  <MenuItem mnemonicParsing="false" onAction="#checkDevice" text="Sprzęt" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Obieg sprzętu" >
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#hardwareRelease" text="Wydanie sprzętu" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Zablokuj">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#blockUser" text="Użytkownika" />
+                  <MenuItem mnemonicParsing="false" onAction="#blockDevice" text="Sprzęt" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#closeApp" text="Zamknij">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Zamknij aplikacje" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

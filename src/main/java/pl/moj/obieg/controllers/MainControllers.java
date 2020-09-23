@@ -18,14 +18,18 @@ public class MainControllers {
     private BorderPane borderPane;
 
     @FXML
+    private Parent parent;
+
+    @FXML
     private void initialize() {
         // chcemy przekazac cala referencje aby sterowac borderPane -
         // podmienić srodkowe okno
         topMenuButtonsController.setMainControllers(this);
     }
-
+    
+    private String fxmlPath = "/fxml/NewUser.fxml";
     //tworzymy formatke wciskajaca w srodek ona nowe zakladki
-    public void setCenter(String fxmlPath){
+    public void setCenter( ){
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
         loader.setResources(bundle);
