@@ -1,5 +1,6 @@
 package pl.moj.obieg.controllers;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,27 +11,20 @@ import java.util.ResourceBundle;
 
 public class MainControllers {
 
-    //wstrzykiwanie odbywa sie przez fx:id z słowem Conetroller
-    @FXML
-    private MenuScreenController topMenuButtonsController;
+    //ustawiamy jako stałe - nigby nie będą się zmieniać
+    private static final String USER_FXML ="/fxml/NewUser.fxml";
 
     @FXML
     private BorderPane borderPane;
 
-    @FXML
-    private Parent parent;
 
     @FXML
     private void initialize() {
-        // chcemy przekazac cala referencje aby sterowac borderPane -
-        // podmienić srodkowe okno
-        topMenuButtonsController.setMainControllers(this);
     }
-    
-    private String fxmlPath = "/fxml/NewUser.fxml";
+
     //tworzymy formatke wciskajaca w srodek ona nowe zakladki
-    public void setCenter( ){
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
+    public void setCenter(String fxmlPath){
+        FXMLLoader loader = new FXMLLoader(this.getClass().getClassLoader().getResource(fxmlPath));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
         loader.setResources(bundle);
         // po parent wszystekie kontrolery dziedzicza
@@ -41,6 +35,56 @@ public class MainControllers {
             e.printStackTrace();
         }
         borderPane.setCenter(parent);
+    }
+
+    @FXML
+    public void newUser(){
+        setCenter(USER_FXML);
+    }
+
+    @FXML
+    public void newDevice(){
+        System.out.println("newDevice");
+    }
+
+    @FXML
+    public void seeUser( ) {
+        System.out.println("seeUser");
+    }
+
+    @FXML
+    public void seeDevice( ) {
+        System.out.println("seeDevice");
+    }
+
+    @FXML
+    public void checkUser( ) {
+        System.out.println("checkUser");
+    }
+
+    @FXML
+    public void checkDevice( ) {
+        System.out.println("checkDevice");
+    }
+
+    @FXML
+    public void hardwareRelease( ) {
+        System.out.println("hardwareRelease");
+    }
+
+    @FXML
+    public void blockUser( ) {
+        System.out.println("blockUser");
+    }
+
+    @FXML
+    public void blockDevice( ) {
+        System.out.println("blockDevice");
+    }
+
+    @FXML
+    public void closeApp( ) {
+        Platform.exit();
     }
 
 }

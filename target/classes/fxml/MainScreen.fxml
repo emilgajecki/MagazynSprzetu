@@ -1,13 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.BorderPane?>
-
-
 <?import javafx.scene.layout.VBox?>
-<BorderPane fx:id="borderPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1">
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<BorderPane fx:id="borderPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.MainControllers">
 <top>
     <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-        <fx:include source="MenuScreen.fxml" fx:id="topMenuButtons"/>
+        <MenuBar id="menu" layoutX="-8.0" layoutY="32.0" prefHeight="25.0" prefWidth="400.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Nowy">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newUser" text="Użytkownik" />
+                        <MenuItem mnemonicParsing="false" onAction="#newDevice" text="Sprzęt" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pokaż">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#seeUser" text="Użytkowników" />
+                        <MenuItem mnemonicParsing="false" onAction="#seeDevice" text="Sprzęt" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Sprawdź">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#checkUser" text="Użytkownika" />
+                        <MenuItem mnemonicParsing="false" onAction="#checkDevice" text="Sprzęt" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Obieg sprzętu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#hardwareRelease" text="Wydanie sprzętu" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Zablokuj">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#blockUser" text="Użytkownika" />
+                        <MenuItem mnemonicParsing="false" onAction="#blockDevice" text="Sprzęt" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" onAction="#closeApp" text="Zamknij">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Zamknij aplikacje" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
     </VBox>
 </top>
 </BorderPane>
