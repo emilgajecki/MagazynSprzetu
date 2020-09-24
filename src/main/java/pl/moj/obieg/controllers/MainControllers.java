@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
+
 import java.io.IOException;
 import java.util.ResourceBundle;
 
@@ -12,7 +13,7 @@ import java.util.ResourceBundle;
 public class MainControllers {
 
     //ustawiamy jako stałe - nigby nie będą się zmieniać
-    private static final String USER_FXML ="/fxml/NewUser.fxml";
+    private static final String USER_FXML = "/fxml/NewUser.fxml";
 
     @FXML
     private BorderPane borderPane;
@@ -23,7 +24,7 @@ public class MainControllers {
     }
 
     //tworzymy formatke wciskajaca w srodek ona nowe zakladki
-    public void setCenter(String fxmlPath){
+    public void setCenter(String fxmlPath) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getClassLoader().getResource(fxmlPath));
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
         loader.setResources(bundle);
@@ -38,52 +39,52 @@ public class MainControllers {
     }
 
     @FXML
-    public void newUser(){
+    public void newUser() {
         setCenter(USER_FXML);
     }
 
     @FXML
-    public void newDevice(){
+    public void newDevice() {
         System.out.println("newDevice");
     }
 
     @FXML
-    public void seeUser( ) {
+    public void seeUser() {
         System.out.println("seeUser");
     }
 
     @FXML
-    public void seeDevice( ) {
+    public void seeDevice() {
         System.out.println("seeDevice");
     }
 
     @FXML
-    public void checkUser( ) {
+    public void checkUser() {
         System.out.println("checkUser");
     }
 
     @FXML
-    public void checkDevice( ) {
+    public void checkDevice() {
         System.out.println("checkDevice");
     }
 
     @FXML
-    public void hardwareRelease( ) {
+    public void hardwareRelease() {
         System.out.println("hardwareRelease");
     }
 
     @FXML
-    public void blockUser( ) {
+    public void blockUser() {
         System.out.println("blockUser");
     }
 
     @FXML
-    public void blockDevice( ) {
+    public void blockDevice() {
         System.out.println("blockDevice");
     }
 
     @FXML
-    public void closeApp( ) {
+    public void closeApp() {
         Platform.exit();
     }
 
