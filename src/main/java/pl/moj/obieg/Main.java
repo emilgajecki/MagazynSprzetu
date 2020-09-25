@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 
@@ -20,7 +18,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // ladujemy okno za pomoca FXML loadera
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/MainScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainScreen.fxml"));
         // w celu ustandaryzowania programu(rozne jezyki uzywamy Resource
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
         // zaczytujemy wiadomosci
