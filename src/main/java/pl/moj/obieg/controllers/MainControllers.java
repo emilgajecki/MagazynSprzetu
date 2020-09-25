@@ -5,13 +5,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
+
 import java.io.IOException;
 import java.util.ResourceBundle;
 
 public class MainControllers {
 
     //ustawiamy jako stałe - nigby nie będą się zmieniać
-    private static final String USER_FXML = "/fxml/NewUser.fxml";
+    private static final String NEW_USER_FXML = "/fxml/NewUser.fxml";
+    private static final String NEW_DEVICE_FXML = "/fxml/NewDevice.fxml";
+    private static final String SEE_USER_FXML = "/fxml/SeeUser.fxml";
+    private static final String SEE_DEVICE_FXML = "/fxml/SeeDevice.fxml";
+    private static final String CHECK_USER_FXML = "/fxml/CheckUser.fxml";
+    private static final String CHECK_DEVICE_FXML = "/fxml/CheckDevice.fxml";
+    private static final String HARDWARE_RELESOE_FXML = "/fxml/HardwareRelese.fxml";
+    private static final String BLOCK_USER_FXML = "/fxml/BlockUser.fxml";
+    private static final String BLOCK_DEVICE_FXML = "/fxml/BlockDevice.fxml";
 
     @FXML
     private BorderPane borderPane;
@@ -38,47 +47,47 @@ public class MainControllers {
 
     @FXML
     public void newUser() {
-        setCenter(USER_FXML);
+        setCenter(NEW_USER_FXML);
     }
 
     @FXML
     public void newDevice() {
-        System.out.println(USER_FXML);
+        setCenter(NEW_DEVICE_FXML);
     }
 
     @FXML
     public void seeUser() {
-        System.out.println("seeUser");
+        setCenter(SEE_USER_FXML);
     }
 
     @FXML
     public void seeDevice() {
-        System.out.println("seeDevice");
+        setCenter(SEE_DEVICE_FXML);
     }
 
     @FXML
     public void checkUser() {
-        System.out.println("checkUser");
+        setCenter(CHECK_USER_FXML);
     }
 
     @FXML
     public void checkDevice() {
-        System.out.println("checkDevice");
+        setCenter(CHECK_DEVICE_FXML);
     }
 
     @FXML
     public void hardwareRelease() {
-        System.out.println("hardwareRelease");
+        setCenter(HARDWARE_RELESOE_FXML);
     }
 
     @FXML
     public void blockUser() {
-        System.out.println("blockUser");
+        setCenter(BLOCK_USER_FXML);
     }
 
     @FXML
     public void blockDevice() {
-        System.out.println("blockDevice");
+        setCenter(BLOCK_DEVICE_FXML);
     }
 
     @FXML
