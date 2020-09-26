@@ -4,9 +4,12 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
+import pl.moj.obieg.dialogs.DialogsUtils;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class MainControllers {
@@ -18,7 +21,7 @@ public class MainControllers {
     private static final String SEE_DEVICE_FXML = "/fxml/SeeDevice.fxml";
     private static final String CHECK_USER_FXML = "/fxml/CheckUser.fxml";
     private static final String CHECK_DEVICE_FXML = "/fxml/CheckDevice.fxml";
-    private static final String HARDWARE_RELESOE_FXML = "/fxml/HardwareRelese.fxml";
+    private static final String HARDWARE_RELASE_FXML = "/fxml/HardwareRelase.fxml";
     private static final String BLOCK_USER_FXML = "/fxml/BlockUser.fxml";
     private static final String BLOCK_DEVICE_FXML = "/fxml/BlockDevice.fxml";
 
@@ -77,7 +80,7 @@ public class MainControllers {
 
     @FXML
     public void hardwareRelease() {
-        setCenter(HARDWARE_RELESOE_FXML);
+        setCenter(HARDWARE_RELASE_FXML);
     }
 
     @FXML
@@ -90,9 +93,15 @@ public class MainControllers {
         setCenter(BLOCK_DEVICE_FXML);
     }
 
-    @FXML
-    public void closeApp() {
-        Platform.exit();
+    public void aboutApp() {
+        DialogsUtils.dialogAbouApplication();
     }
 
+    @FXML
+    public void closeApp() {
+        Optional<ButtonType> result =DialogsUtils.confirmationDialog();
+        if(result.get() ==ButtonType.OK){
+            Platform.exit();
+        }
+    }
 }
