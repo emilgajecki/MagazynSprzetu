@@ -22,7 +22,7 @@ public class DbManager {
 
     private static final String JDBC_DRIVER_HD = "jdbc:mysql://localhost:3306/hagric?serverTimezone=UTC";
     private static final String USER = "admin";
-    private static final String PASS = "Kamczactiusz10!";
+    private static final String PASS = "root";
 
     private static ConnectionSource connectionSource;
 
