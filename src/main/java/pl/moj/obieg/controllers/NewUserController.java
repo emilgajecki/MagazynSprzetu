@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import pl.moj.obieg.modelfx.SectionFx;
 
 public class NewUserController {
 
@@ -25,7 +24,7 @@ public class NewUserController {
     private TextField lastNameTextFIeld;
 
     @FXML
-    private ComboBox<SectionFx> sectionComboBox;
+    private ComboBox<String> sectionComboBox;
 
     @FXML ComboBox<String> isActiveComboBox;
 
