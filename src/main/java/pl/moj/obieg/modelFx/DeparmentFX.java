@@ -4,9 +4,8 @@
  * @ linkedin : https://linkedin.com/in/emil-gajecki
  */
 
-package pl.moj.obieg.database.models;
+package pl.moj.obieg.modelFx;
 
-public class Device {
-
+public class DeparmentFX {
 
 }

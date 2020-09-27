@@ -6,15 +6,5 @@
 
 package pl.moj.obieg.database.models;
 
-public class User {
-
-    public User(){
-
-    }
-
-    private String name;
-    private String lastName;
-    private int idDzialu;
-
-
+public interface BaseModel {
 }

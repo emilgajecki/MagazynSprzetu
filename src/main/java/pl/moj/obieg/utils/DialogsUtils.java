@@ -4,10 +4,17 @@
  * @ linkedin : https://linkedin.com/in/emil-gajecki
  */
 
-package pl.moj.obieg.dialogs;
+/*
+ * @ author : Emil Gajęcki
+ * @ github: https://github.com/emilgajecki
+ * @ linkedin : https://linkedin.com/in/emil-gajecki
+ */
+
+package pl.moj.obieg.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextArea;
 
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -32,6 +39,16 @@ public class DialogsUtils {
         Optional<ButtonType> result =confirmationDialog.showAndWait();
         return result;
 
+    }
+
+    public static void errorDialog(String error) {
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+        errorAlert.setTitle(bundle.getString("error.title"));
+        errorAlert.setHeaderText(bundle.getString("error.header"));
+
+        TextArea textArea = new TextArea(error);
+        errorAlert.getDialogPane().setContent(textArea);
+        errorAlert.showAndWait();
     }
 }
 

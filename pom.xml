@@ -41,15 +41,12 @@
             </plugin>
         </plugins>
     </build>
-    <properties>
-        <maven.compiler.source>
-            1.8
-        </maven.compiler.source>
-        <maven.compiler.target>
-            1.8
-        </maven.compiler.target>
-    </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.j256.ormlite</groupId>
+            <artifactId>ormlite-jdbc</artifactId>
+            <version>5.0</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

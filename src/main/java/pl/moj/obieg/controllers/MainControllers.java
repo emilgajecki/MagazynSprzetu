@@ -6,7 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
-import pl.moj.obieg.dialogs.DialogsUtils;
+import pl.moj.obieg.database.dbutils.DBUtils;
+import pl.moj.obieg.utils.DialogsUtils;
 
 import java.io.IOException;
 import java.util.Optional;

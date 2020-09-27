@@ -5,9 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import pl.moj.obieg.database.dbutils.JDBCConnection;
+import pl.moj.obieg.database.dbutils.DbManager;
 
-import java.sql.Connection;
 import java.util.ResourceBundle;
 
 
@@ -34,7 +33,7 @@ public class Main extends Application {
         primaryStage.setTitle(bundle.getString("title.application"));
         primaryStage.show();
         //inicjalizujemy polaczenie z baza danych
-        Connection connection = JDBCConnection.MYSQL_hagric.getConnection();
+        DbManager.initDatabase();
     }
 
 }
