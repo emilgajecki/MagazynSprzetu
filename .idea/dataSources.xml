@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Hagric@DESKTOP-E4M08VH" uuid="8a0c75ed-8fed-4835-a1cd-c77022eb7e36">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://DESKTOP-E4M08VH\SQLEXPRESS;database=Hagric</jdbc-url>
+    </data-source>
+  </component>
+</project>
