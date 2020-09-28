@@ -23,13 +23,16 @@ public class CreateTable {
     // tworznie tabeli w sql - polecenie w sql'u dajemy
     // execute daje true jezeli zwraca jakis wynik,
     // false jezeli nie mamy bledu
-    boolean result = createTable.execute("create table kursanci (email varchar(25) primary key, nick varchar(15));");
+    boolean result = createTable.execute("create table departments (id_dzialu  integer primary key," +
+            " name_departments varchar(25));");
     System.out.println("Polecenie poprawnie wykonane ?"+result);
 
     // wstawiamy dane w tablei
     Statement insertRow = connection.createStatement();
-    int count = insertRow.executeUpdate("insert into kursanci values('karol@op.pl','karole')," +
-            "('ewa@gmail.com','ewa'),('marek@sda.pl','marek');");
+    int count = insertRow.executeUpdate("insert into departments values(1,'it')," +
+            "(2,'biuro zarządu'),(3,'rodo'),(4,'kadry'),(5,'bydło i cielaki')," +
+            "(6,'windykacja'),(7,'logistyka'),(8,'warsztat'),(9,'ksiegowosc')," +
+            "(10,'przedtawiciele'),(11,'trzoda');");
     System.out.println("Liczba wstawionych rekordów: " + count);
 }
 }
