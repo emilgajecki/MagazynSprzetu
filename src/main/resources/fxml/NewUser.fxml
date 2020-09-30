@@ -14,10 +14,10 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moj.obieg.controllers.NewUserController">
    <children>
-      <Button fx:id="addUser" layoutX="422.0" layoutY="263.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj użytkownika" />
+      <Button fx:id="addUserButton" layoutX="422.0" layoutY="263.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj użytkownika" />
       <Label layoutX="139.0" layoutY="65.0" text="Imie" />
       <Label layoutX="136.0" layoutY="91.0" text="Nazwisko" />
-      <TextField fx:id="nameTextField" layoutX="226.0" layoutY="61.0" />
+      <TextField fx:id="nameTextField" layoutX="226.0" layoutY="61.0"  />
       <TextField fx:id="lastNameTextFIeld" layoutX="226.0" layoutY="87.0" />
       <Label layoutX="136.0" layoutY="128.0" text="Wybierz dział" />
       <ComboBox fx:id="sectionComboBox" layoutX="225.0" layoutY="124.0" prefWidth="150.0" />

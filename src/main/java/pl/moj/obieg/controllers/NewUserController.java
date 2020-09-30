@@ -6,16 +6,22 @@
 
 package pl.moj.obieg.controllers;
 
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Text;
+
+
 
 public class NewUserController {
 
+    String name;
+
     @FXML
-    private Button addUser;
+    private Button addUserButton;
 
     @FXML
     private TextField nameTextField;
@@ -24,11 +30,29 @@ public class NewUserController {
     private TextField lastNameTextFIeld;
 
     @FXML
-    private ComboBox<String> sectionComboBox;
+    private ComboBox sectionComboBox;
 
-    @FXML ComboBox<String> isActiveComboBox;
+    @FXML
+    private ComboBox<String> isActiveComboBox;
+
+    @FXML
+    public void addUser( ){
+        addUserButton.setOnAction(action ->{
+            getNameTextField();
+        });
+        addUserButton.setOnAction(action ->{
+            getLastNameTextFIeld();
+        });
 
 
-    public void addUser() {
+        System.out.println(getNameTextField() +" "+getLastNameTextFIeld());
+    }
+
+    public String getNameTextField() {
+        return nameTextField.getText();
+    }
+
+    public String getLastNameTextFIeld() {
+        return lastNameTextFIeld.getText();
     }
 }

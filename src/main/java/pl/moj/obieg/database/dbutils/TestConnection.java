@@ -23,6 +23,6 @@ public class TestConnection {
             InstantiationException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").getConstructor().newInstance();
                 Connection connection = DriverManager.getConnection("jdbc:sqlserver://DESKTOP-E4M08VH\\SQLEXPRESS;database=Hagric",
-                        "emil","");
+                        "emil","Kamczactiusz10!");
             }
 }
